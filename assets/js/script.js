@@ -2,17 +2,13 @@ $(document).ready(function () {
     controleSetas();
     criaModal();
 
-
-
-
-
-    $('.btn-criar-acao').on('click',function(){
+    $('.btn-criar-acao').on('click', function () {
         $('.tela-1').addClass('d-none');
         $('.tela-2').removeClass('d-none');
     })
 
 
-    $('.btn-primeira-tela').on('click',function(){
+    $('.btn-primeira-tela').on('click', function () {
         $('.tela-2').addClass('d-none');
         $('.tela-1').removeClass('d-none');
     })
@@ -20,47 +16,120 @@ $(document).ready(function () {
 
 
     fraseAleatoria();
-    
-    
-   
 
-  });
-
+});
 
 
 
 function fraseAleatoria() {
-    const frases = [
-        'Gincanas e atividades ao ar livre',
-        'Jogos em quadras e praças públicas',
-        'Piquenique',
-        'Oficina de desenho',
-        'Desafio de talentos',
-        'Programa de mentoria',
-        'Dia do feedback',
-        'Programa de Ideias',
-        'Happy hour temático',
-        'Programa de qualidade de vida',
-        'Aluguel de piscina de bolinhas',
-        'Aluguel de cama elástica',
-        'Profissional para realizar recreação',
-        'Brindes'
+    const opcoes = [
+        {
+            texto: 'Gincanas e atividades ao ar livre',
+            tipo: 'positivo',
+            feedback: `Isso mesmo! É possível realizar diversas atividades ao ar livre em praças públicas da cidade e/ou em locais que não necessitam de locação. Utilizando a criatividade, as gincanas podem ser muito divertidas, proporcionando integração dos colaboradores e suas famílias.`
+        },
+        {
+            texto: 'Jogos em quadras e praças públicas',
+            tipo: 'positivo',
+            feedback: `Que tal promover esportes como basquete, futebol, vôlei e handebol? Descubra as afinidades dos seus colaboradores, crie times e solicite o empréstimo dos equipamentos necessários.`
+        },
+        {
+            texto: 'Piquenique',
+            tipo: 'positivo',
+            feedback: `Mesmo sem recursos, é possível proporcionar um momento de integração e colaboração. Incentive os colaboradores a fornecerem um alimento e/ou bebida para essa ação. Com a colaboração de todos, será possível realizar um ótimo piquenique ao ar livre.`
+        },
+        {
+            texto: 'Oficina de desenho',
+            tipo: 'positivo',
+            feedback: `Verifique a viabilidade de utilizar folhas disponíveis na organização e solicite aos colaboradores que contribuam com o empréstimo de canetas, giz de cera e lápis de cor. Assim será possível proporcionar um momento de descontração com as crianças.`
+        },
+        {
+            texto: 'Desafio de talentos',
+            tipo: 'positivo',
+            feedback: `Realizar um concurso interno onde os colaboradores podem mostrar seus talentos em diversas áreas (música, dança, culinária, etc.) revela talentos escondidos, promove a integração entre os colaboradores e cria um ambiente divertido e descontraído.`
+        },
+        {
+            texto: 'Programa de mentoria',
+            tipo: 'positivo',
+            feedback: `Criar um programa onde colaboradores mais experientes podem mentorar os mais novos, compartilhando conhecimentos e experiências, desenvolve habilidades, promove o aprendizado contínuo, fortalece o senso de comunidade e valoriza o conhecimento interno.`
+        },
+        {
+            texto: 'Dia do feedback',
+            tipo: 'positivo',
+            feedback: `Dedicar um dia por mês para que os colaboradores possam dar e receber feedbacks construtivos sobre seu trabalho e desempenho. Melhora a comunicação interna, promove o desenvolvimento profissional e fortalece a cultura de feedback.`
+        },
+        {
+            texto: 'Programa de Ideias',
+            tipo: 'positivo',
+            feedback: `Criar um canal online ou físico onde os colaboradores podem compartilhar ideias de melhoria para a empresa. Estimula a participação dos colaboradores, valoriza suas opiniões e promove a inovação.`
+        },
+        {
+            texto: 'Happy hour temático',
+            tipo: 'positivo',
+            feedback: `Organizar um happy hour mensal com temas diferentes (ex: karaokê, jogos, etc.) para promover a integração e descontração entre os colaboradores. Fortalece os laços entre os colaboradores, melhora o clima organizacional e promove um ambiente de trabalho mais leve e divertido.`
+        },
+        {
+            texto: 'Programa de qualidade de vida',
+            tipo: 'positivo',
+            feedback: `Oferecer atividades gratuitas para os colaboradores, como aulas de yoga, meditação, ginástica laboral, etc. Melhora a saúde e o bem-estar dos colaboradores, reduz o estresse e promove um ambiente de trabalho mais equilibrado.`
+        },
+        {
+            texto: 'Aluguel de piscina de bolinhas',
+            tipo: 'negativo',
+            feedback: `Infelizmente a empresa não possui recursos para aluguel de brinquedos, mas você pode buscar alternativas gratuitas e/ou parcerias.`
+        },
+        {
+            texto: 'Aluguel de cama elástica',
+            tipo: 'negativo',
+            feedback: `Infelizmente a empresa não possui recursos para aluguel de brinquedos, mas você pode buscar alternativas gratuitas e/ou parcerias.`
+        },
+        {
+            texto: 'Profissional para realizar recreação',
+            tipo: 'negativo',
+            feedback: `Infelizmente a empresa não possui recursos para aluguel de brinquedos, mas você pode buscar alternativas gratuitas. Que tal incentivar os colaboradores a serem voluntários na recreação com as crianças? Incentive a realização de brincadeiras, conte histórias e torne esse dia especial para todos.`
+        },
+        {
+            texto: 'Brindes',
+            tipo: 'negativo',
+            feedback: `Infelizmente a empresa não possui recursos para a compra de brindes, mas com criatividade e um bom planejamento, a memória desse dia certamente será um bom presente.`
+        }
     ];
 
-    // Função para embaralhar as frases
     function embaralhar(array) {
         return array.sort(() => Math.random() - 0.5);
     }
 
+    const opcoesEmbaralhadas = embaralhar(opcoes.slice());
 
-    const frasesAleatorias = embaralhar(frases.slice()); // cópia embaralhada
     $('.btn-opcoes').each(function (index) {
-        const frase = frasesAleatorias[index];
-        if (frase) {
-            $(this).text(frase);
+        const opcao = opcoesEmbaralhadas[index];
+        if (opcao) {
+            $(this).text(opcao.texto);
+            $(this).data('titulo', opcao.texto);
+            $(this).data('feedback', opcao.feedback);
+            $(this).data('tipo', opcao.tipo);
         }
     });
+
+    $('.btn-opcoes').on('click', function () {
+        const titulo = $(this).data('titulo');
+        const texto = $(this).data('feedback');
+        const tipo = $(this).data('tipo');
+
+        $('#modalFeedbackLabel').text(titulo);
+        $('#modalTextoFeedback').text(texto);
+
+        if (tipo === 'positivo') {
+            $('#modalFeedback .modal-content').removeClass('modal-negativo').addClass('modal-positivo');
+        } else {
+            $('#modalFeedback .modal-content').removeClass('modal-positivo').addClass('modal-negativo');
+        }
+
+        $('#modalFeedback').modal('show');
+    });
+
 }
+
 
 function criaModal() {
     const conteudosModal = {
@@ -187,4 +256,3 @@ function controleSetas() {
 
 
 
-  
