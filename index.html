@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clique e arraste os documentos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="body-game">
+        <div class="tela-1 painel-clicavel position-relative">
+            <img src="assets/img/bg-tela-1.png" class="img-bg-tela-1 position-relative img-fluid" alt="background mesa com calendario">
+
+            <h1 class="position-absolute titulo-calendario">Planejamento de ações</h1>
+            <h3 class="position-absolute subtitulo-calendario parte-1 mes-1">Jan</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-1 mes-2">Fev</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-1 mes-3">Mar</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-1 mes-4">Abr</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-1 mes-5">Mai</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-1 mes-6">Jun</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-2 d-none mes-7">Jul</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-2 d-none mes-8">Ago</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-2 d-none mes-9">Set</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-2 d-none mes-10">Out</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-2 d-none mes-11">Nov</h3>
+            <h3 class="position-absolute subtitulo-calendario parte-2 d-none mes-12">Dez</h3>
+
+            <button class="position-absolute btn-data parte-1 btn-fev"><img class="img-fluid" src="assets/img/btn_carnaval.png" alt="botão carnaval"></button>
+            <button class="position-absolute btn-data parte-1 btn-mar"><img class="img-fluid" src="assets/img/btn_mulher.png" alt="botão dia da mulher"></button>
+            <button class="position-absolute btn-data parte-1 btn-abr"><img class="img-fluid" src="assets/img/btn_pascoa.png" alt="Botão Pascoa"></button>
+            <button class="position-absolute btn-data parte-1 btn-mai"><img class="img-fluid" src="assets/img/btn_trabalho.png" alt="botão dia do trabalho"></button>
+            <button class="position-absolute btn-data parte-1 btn-jun"><img class="img-fluid" src="assets/img/btn_familia.png" alt="botão dia da familia"></button>
+        
+            <button class="position-absolute btn-data parte-2 d-none btn-ago"><img class="img-fluid" src="assets/img/btn_empresa.png" alt="dia da empresa"></button>
+            <button class="position-absolute btn-data parte-2 d-none btn-set"><img class="img-fluid" src="assets/img/btn_amarelo.png" alt="botão setembro amarelo"></button>
+            <button class="position-absolute btn-data parte-2 d-none btn-out"><img class="img-fluid" src="assets/img/btn_rosa.png" alt="botão outubro rosa"></button>
+            <button class="position-absolute btn-data parte-2 d-none btn-nov"><img class="img-fluid" src="assets/img/btn_azul.png" alt="botão novembro azul"></button>
+            <button class="position-absolute btn-data parte-2 d-none btn-dez"><img class="img-fluid" src="assets/img/btn_natal.png" alt="botão natal"></button>
+            
+            <button class="button position-absolute btn-criar-acao">Criar ação</button>
+            <button class="position-absolute btn-seta btn-voltar parte-2 d-none"><img class="img-fluid" src="assets/img/seta_volta.png" alt="botão voltar"></button>
+            <button class="position-absolute btn-seta btn-avancar parte-1"><img class="img-fluid" src="assets/img/seta_avanca.png" alt="botão avançar"></button>
+
+        </div>
+
+        <div class="tela-2 tela-interacao position-relative d-none">
+            <img src="assets/img/Grupo 15.png" class="img-bg-tela-1 position-relative img-fluid" alt="background mesa com calendario">
+
+            <h2 class="subtitulo-tela-2">Escolha as melhores
+                opções para o dia família</h2>
+
+            <button class="position-absolute btn-opcoes parte-a btn-1"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-2"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-3"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-4"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-5"></button>
+        
+            <button class="position-absolute btn-opcoes parte-a btn-6"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-7"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-8"></button>
+            <button class="position-absolute btn-opcoes parte-a btn-9"></button>
+            <button class="position-absolute btn-opcoes d-none parte-b btn-10"></button>
+
+            <button class="position-absolute btn-opcoes d-none parte-b btn-11"></button>
+            <button class="position-absolute btn-opcoes d-none parte-b btn-12"></button>
+            <button class="position-absolute btn-opcoes d-none parte-b btn-13"></button>
+            <button class="position-absolute btn-opcoes d-none parte-b btn-14"></button>
+
+            <button class="position-absolute btn-seta btn-voltar-tela2 parte-b"><img class="img-fluid" src="assets/img/seta_volta.png" alt="botão voltar"></button>
+            <button class="position-absolute btn-seta btn-avancar-tela2 parte-a"><img class="img-fluid" src="assets/img/seta_avanca.png" alt="botão avançar"></button>
+
+            <button class="button position-absolute btn-primeira-tela">Calendário</button>
+            <button class="btn position-absolute btn-instrucao" data-bs-target="#modalInstrucao" data-bs-toggle="modal">Instrução</button>
+      
+        </div>
+    </div>
+
+    <!-- Modal dinâmica -->
+    <div class="modal fade" id="modalPlanejamento" tabindex="-1" aria-labelledby="modalPlanejamentoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content estilo-modal">
+            <div class="modal-header">
+                <h1 class="modal-title titulo-modal col fs-5" id="modalPlanejamentoLabel">Título</h1>
+            </div>
+            <div class="modal-body">
+            <p class="p-modal" id="modalTexto">Texto aqui</p>
+            <div class="modal-footer text-left">
+            <button type="button" class="btn btn-fechar-modal" data-bs-dismiss="modal">Fechar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+ <!-- Modal instrução -->
+    <div class="modal fade" id="modalInstrucao" aria-hidden="true" aria-labelledby="modalInstrucaoLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content estilo-modal">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalInstrucaoLabel">Criar Ação</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="p-instrucao">Dado o limitado orçamento destinado ao endomarketing, optou-se por concentrar esforços em comunicados disseminados através de diversos canais internos e estabelecer parcerias com instituições para promover as iniciativas. Dois momentos foram cuidadosamente escolhidos para a compra de brindes, além do bolo para celebrar o aniversário da empresa. Assim, é crucial que o profissional de RH encarregado das demandas de endomarketing conduza um gerenciamento eficaz dessas iniciativas e busque soluções criativas, considerando a cultura organizacional, o orçamento e as oportunidades disponíveis a serem exploradas.    </p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-continuar" data-bs-target="#modalInstrucao2" data-bs-toggle="modal">Continuar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modalInstrucao2" aria-hidden="true" aria-labelledby="modalInstrucaoLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content estilo-modal">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalInstrucaoLabel2">Instruções</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                A empresa aprovou o planejamento realizado das ações. No entanto, reconhecendo a importância da data, solicitou a organização para um evento de integração no Dia da Família. Portanto, sugira o planejamento das ações a serem realizadas, lembrando que a empresa já utilizou os seus recursos para compras de brindes em outras ações, o que significa que não há orçamento adicional disponível para esse evento específico. Utilize sua criatividade para o planejamento da ação, considerando as seguintes opções:  
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-continuar" data-bs-target="#modalInstrucao" data-bs-toggle="modal">Voltar</button>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  
+
+    <audio id="audio-acerto">
+        <source src="assets/audio/acerto.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio-errado">
+        <source src="assets/audio/erro.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio-clique">
+        <source src="assets/audio/clique.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

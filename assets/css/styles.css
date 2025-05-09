@@ -1,0 +1,430 @@
+.position-absolute.titulo-calendario {
+  top: 346.3px;
+  left: 689.9px;
+  rotate: -4.7deg;
+}
+
+.subtitulo-calendario {
+  top: 10px;
+}
+
+.btn-data {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.btn-data:hover {
+  transform: scale(0.8);
+}
+
+.btn-criar-acao {
+  background-color: #ffefd2;
+  color: #6f5029;
+  border: 2px solid #613917;
+  border-radius: 30px;
+  top: 958.9px;
+  left: 1393.3px;
+  width: 239.4px;
+  padding: 4.3px;
+  font-size: 2rem;
+}
+
+.btn-criar-acao:hover {
+  transform: scale(0.8);
+}
+
+.btn-seta {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.btn-seta:hover {
+  transform: scale(0.8);
+}
+
+.btn-voltar {
+  top: 529.2px;
+  left: 385.9px;
+}
+
+.btn-avancar {
+  top: 460.7px;
+  left: 1377.2px;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.animando-sumir {
+  animation: fadeOutZoom 0.9s forwards;
+}
+
+.animando-aparecer {
+  animation: fadeInZoom 0.9s forwards;
+}
+
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/********************************************************************/
+/**************************** estilo modal **************************/
+/********************************************************************/
+
+.estilo-modal {
+  background-color: #ffefd2;
+  border: 1px solid #ffefd2;
+  border-radius: 30px;
+  padding-inline: 28px;
+}
+
+.btn-fechar-modal {
+  background-color: #ff9e52;
+  color: #6f5029;
+  border: 2px solid #613917;
+  border-radius: 30px;
+  width: 151px;
+  padding: 4.3px;
+  font-size: 1.5rem;
+}
+
+.btn-fechar-modal:hover {
+  transform: scale(0.8);
+}
+
+.btn-continuar {
+  background-color: #ff9e52;
+  color: #6f5029;
+  border: 2px solid #613917;
+  border-radius: 30px;
+  width: 151px;
+  padding: 4.3px;
+  font-size: 1.5rem;
+}
+
+.btn-continuar:hover {
+  transform: scale(0.8);
+}
+
+.estilo-modal {
+  color: #855222;
+}
+
+.p-modal {
+  color: #855222;
+  font-size: 1rem;
+}
+
+/********************************************************************/
+/************************ posicionamento mês ************************/
+/********************************************************************/
+
+.mes-1 {
+  top: 442.2px;
+  left: 585.3px;
+  font-size: 3rem;
+  rotate: -6deg;
+}
+
+.mes-2 {
+  top: 430.3px;
+  left: 700.5px;
+  font-size: 3rem;
+  rotate: -4.6deg;
+}
+
+.mes-3 {
+  top: 426.2px;
+  left: 832.1px;
+  font-size: 3rem;
+  rotate: -7.4deg;
+}
+
+.mes-4 {
+  top: 418.4px;
+  left: 938.9px;
+  font-size: 3rem;
+  rotate: -7.6deg;
+}
+
+.mes-5 {
+  top: 405.3px;
+  left: 1065.9px;
+  font-size: 3rem;
+  rotate: -7.5deg;
+}
+
+.mes-6 {
+  top: 396.8px;
+  left: 1195px;
+  font-size: 3rem;
+  rotate: -7.6deg;
+}
+
+.mes-7 {
+  top: 442.2px;
+  left: 585.3px;
+  font-size: 3rem;
+  rotate: -6deg;
+}
+
+.mes-8 {
+  top: 430.3px;
+  left: 700.5px;
+  font-size: 3rem;
+  rotate: -4.6deg;
+}
+
+.mes-9 {
+  top: 426.2px;
+  left: 832.1px;
+  font-size: 3rem;
+  rotate: -7.4deg;
+}
+
+.mes-10 {
+  top: 418.4px;
+  left: 938.9px;
+  font-size: 3rem;
+  rotate: -7.6deg;
+}
+
+.mes-11 {
+  top: 405.3px;
+  left: 1065.9px;
+  font-size: 3rem;
+  rotate: -7.5deg;
+}
+
+.mes-12 {
+  top: 396.8px;
+  left: 1195px;
+  font-size: 3rem;
+  rotate: -7.6deg;
+}
+
+/********************************************************************/
+/********************** posicionamento botões ***********************/
+/********************************************************************/
+
+.btn-fev {
+  top: 509.5px;
+  left: 702.4px;
+}
+
+.btn-mar {
+  top: 591.8px;
+  left: 839.4px;
+}
+
+.btn-abr {
+  top: 673.8px;
+  left: 973.1px;
+}
+
+.btn-mai {
+  top: 478.1px;
+  left: 1068.2px;
+}
+
+.btn-jun {
+  top: 650.3px;
+  left: 1234.7px;
+}
+
+.btn-ago {
+  top: 509.5px;
+  left: 702.4px;
+}
+
+.btn-set {
+  top: 591.8px;
+  left: 839.4px;
+}
+
+.btn-out {
+  top: 673.8px;
+  left: 973.1px;
+}
+
+.btn-nov {
+  top: 478.1px;
+  left: 1068.2px;
+}
+
+.btn-dez {
+  top: 650.3px;
+  left: 1234.7px;
+}
+
+
+/********************************************************************/
+/***************************** segunda tela ************************/
+/********************************************************************/
+
+.subtitulo-tela-2 {
+	position: absolute;
+	top: 164.7px;
+	left: 767.2px;
+	width: 420.3px;
+	color: #6f5029;
+}
+
+.btn-primeira-tela {
+	background-color: #ffefd2;
+	color: #6f5029;
+	border: 2px solid #613917;
+	border-radius: 30px;
+	top: 958.9px;
+	left: 1019.9px;
+	width: 239.4px;
+	padding: 4.3px;
+	font-size: 2rem;
+}
+
+.btn-primeira-tela:hover {
+  transform: scale(0.8);
+}
+
+.btn-instrucao {
+	background-color: #ffefd2;
+	color: #6f5029;
+	border: 2px solid #613917;
+	border-radius: 30px;
+	top: 958.9px;
+	left: 732.5px;
+	width: 239.4px;
+	padding: 4.3px;
+	font-size: 2rem;
+}
+
+.btn-instrucao:hover {
+  transform: scale(0.8);
+}
+
+.btn-seta {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.btn-seta:hover {
+  transform: scale(0.8);
+}
+
+.btn-voltar-tela2 {
+	top: 551.0px;
+	left: 581.2px;
+}
+
+.btn-avancar-tela2 {
+	top: 550.2px;
+	left: 1284.6px;
+}
+
+.btn-opcoes {
+	background-image: url('../img/btn-opcoes.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 200px;
+	height: 200px;
+	border: none;
+	background-color: transparent;
+	font-size: 20px;
+	text-align: center;
+	white-space: normal !important;
+	line-height: 1.2;
+	overflow-wrap: break-word;
+	padding: 36.4px;
+}
+
+.btn-1 {
+	top: 332.9px;
+	left: 702.4px;
+}
+
+.btn-2 {
+	top: 330.4px;
+	left: 885.6px;
+}
+
+.btn-3 {
+	top: 333.3px;
+	left: 1084.0px;
+}
+
+.btn-4 {
+  top: 509.5px;
+  left: 702.4px;
+}
+
+.btn-5 {
+	top: 509.5px;
+	left: 894.4px;
+}
+
+.btn-6 {
+	top: 509.5px;
+	left: 1087.5px;
+}
+
+.btn-7 {
+	top: 726.5px;
+	left: 702.4px;
+}
+
+.btn-8 {
+	top: 723.6px;
+	left: 893.8px;
+}
+
+.btn-9 {
+	top: 723.3px;
+	left: 1090.3px;
+}
+
+.btn-10 {
+	top: 332.9px;
+	left: 702.4px;
+}
+
+.btn-11 {
+	top: 330.4px;
+	left: 885.6px;
+}
+
+.btn-12 {
+	top: 333.3px;
+	left: 1084.0px;
+}
+
+.btn-13 {
+  top: 509.5px;
+  left: 702.4px;
+}
+
+.btn-14 {
+	top: 509.5px;
+	left: 894.4px;
+}
+
+
