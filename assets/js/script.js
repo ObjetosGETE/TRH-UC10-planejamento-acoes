@@ -1,25 +1,41 @@
 $(document).ready(function () {
     controleSetas();
     criaModal();
+    controleBotoes();
+    fraseAleatoria();
 
+    resizeBodyConteudo();
+    $(window).resize(function () {
+        resizeBodyConteudo()
+      })
+});
+
+
+
+function controleBotoes() {
     $('.btn-criar-acao').on('click', function () {
         $('.tela-1').addClass('d-none');
         $('.tela-2').removeClass('d-none');
-    })
+    });
 
 
     $('.btn-primeira-tela').on('click', function () {
         $('.tela-2').addClass('d-none');
         $('.tela-1').removeClass('d-none');
-    })
+    });
 
+    $('.btn-continuar').on('click', function () {
+        $('#modalInstrucao').modal('hide');
+        $('#modalInstrucao').on('hidden.bs.modal', function () {
+            $('#modalInstrucao2').modal('show');
+        });
+    });
 
-
-    fraseAleatoria();
-
-});
-
-
+    $('.btn-fechar-modal').on('click', function () {
+        $('.modal-backdrop').remove();
+        $('body').removeClass('modal-open').css('padding-right', '');
+    });
+}
 
 function fraseAleatoria() {
     const opcoes = [
@@ -129,7 +145,6 @@ function fraseAleatoria() {
     });
 
 }
-
 
 function criaModal() {
     const conteudosModal = {
@@ -251,6 +266,46 @@ function controleSetas() {
 }
 
 
+function escalaProporcao(largura, altura) {
+    var larguraScreen = $(window).width();
+    var alturaScreen = $(window).height();
+    var proporcaoAltura = (alturaScreen * 100) / altura;
+    var proporcaoLargura = (larguraScreen * 100) / largura;
+    var proporcao, larguraAltura, larguraAlturaAuto;
+
+    if (proporcaoAltura < proporcaoLargura) {
+      larguraAltura = "height";
+      larguraAlturaAuto = "width";
+      proporcao = proporcaoAltura / 100;
+    } else {
+      larguraAltura = "width";
+      larguraAlturaAuto = "height";
+      proporcao = proporcaoLargura / 100;
+    }
+
+    console.log(proporcao, proporcaoAltura, proporcaoLargura)
+    return [proporcao, larguraAltura, larguraAlturaAuto];
+  }
+
+
+  function resizeBodyConteudo() {
+    var proporcao1920 = escalaProporcao(1920, 1080)[0];
+
+    $(".conteudo").css({
+      "transform": "scale(" + proporcao1920 + ")",
+      "transform-origin": "center center"
+    });
+
+    var proporcao900;
+
+    if ($(window).width() < 992) {
+      proporcao900 = escalaProporcao(900, 576)[0];
+    } else {
+      proporcao900 = 1;
+    }
+  }
+
+ 
 
 
 

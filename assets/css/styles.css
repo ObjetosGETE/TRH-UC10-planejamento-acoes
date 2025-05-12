@@ -1,3 +1,13 @@
+.conteudo {
+  width: 1920px;
+  height: 1080px;
+  position: fixed;
+  left: calc(50% - 1920px / 2);
+  top: calc(50% - 1080px / 2);
+  margin: auto;
+  overflow: hidden;
+}
+
 .position-absolute.titulo-calendario {
   top: 346.3px;
   left: 689.9px;
@@ -69,6 +79,7 @@
     opacity: 1;
     transform: scale(1);
   }
+
   100% {
     opacity: 0;
     transform: scale(0.95);
@@ -80,6 +91,7 @@
     opacity: 0;
     transform: scale(1.05);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -282,23 +294,23 @@
 /********************************************************************/
 
 .subtitulo-tela-2 {
-	position: absolute;
-	top: 164.7px;
-	left: 767.2px;
-	width: 420.3px;
-	color: #6f5029;
+  position: absolute;
+  top: 164.7px;
+  left: 767.2px;
+  width: 420.3px;
+  color: #6f5029;
 }
 
 .btn-primeira-tela {
-	background-color: #ffefd2;
-	color: #6f5029;
-	border: 2px solid #613917;
-	border-radius: 30px;
-	top: 958.9px;
-	left: 1019.9px;
-	width: 239.4px;
-	padding: 4.3px;
-	font-size: 2rem;
+  background-color: #ffefd2;
+  color: #6f5029;
+  border: 2px solid #613917;
+  border-radius: 30px;
+  top: 958.9px;
+  left: 1019.9px;
+  width: 239.4px;
+  padding: 4.3px;
+  font-size: 2rem;
 }
 
 .btn-primeira-tela:hover {
@@ -306,15 +318,15 @@
 }
 
 .btn-instrucao {
-	background-color: #ffefd2;
-	color: #6f5029;
-	border: 2px solid #613917;
-	border-radius: 30px;
-	top: 958.9px;
-	left: 732.5px;
-	width: 239.4px;
-	padding: 4.3px;
-	font-size: 2rem;
+  background-color: #ffefd2;
+  color: #6f5029;
+  border: 2px solid #613917;
+  border-radius: 30px;
+  top: 958.9px;
+  left: 732.5px;
+  width: 239.4px;
+  padding: 4.3px;
+  font-size: 2rem;
 }
 
 .btn-instrucao:hover {
@@ -331,100 +343,128 @@
 }
 
 .btn-voltar-tela2 {
-	top: 551.0px;
-	left: 581.2px;
+  top: 566.2px;
+  left: 133.2px;
 }
 
 .btn-avancar-tela2 {
-	top: 550.2px;
-	left: 1284.6px;
+  top: 566.2px;
+  left: 1360.6px;
 }
 
 .btn-opcoes {
-	background-image: url('../img/btn-opcoes.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 200px;
-	height: 200px;
-	border: none;
-	background-color: transparent;
-	font-size: 20px;
-	text-align: center;
-	white-space: normal !important;
-	line-height: 1.2;
-	overflow-wrap: break-word;
-	padding: 36.4px;
+  background-image: url('../img/btn-opcoes.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 273px;
+  height: 291px;
+  border: none;
+  background-color: transparent;
+  font-size: 2.3rem;
+  text-align: center;
+  white-space: normal !important;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  padding: 25px;
 }
 
 .btn-1 {
-	top: 332.9px;
-	left: 702.4px;
+  top: 332.9px;
+  left: 544.4px;
 }
 
 .btn-2 {
-	top: 330.4px;
-	left: 885.6px;
+  top: 330.4px;
+  left: 815.4px;
 }
 
 .btn-3 {
-	top: 333.3px;
-	left: 1084.0px;
+  top: 333.3px;
+  left: 1084.0px;
 }
 
 .btn-4 {
-  top: 509.5px;
-  left: 702.4px;
+  top: 627.5px;
+  left: 543.4px;
 }
 
 .btn-5 {
-	top: 509.5px;
-	left: 894.4px;
+  top: 629.5px;
+  left: 815.4px;
 }
 
 .btn-6 {
-	top: 509.5px;
-	left: 1087.5px;
+  top: 629.5px;
+  left: 1087.5px;
 }
 
 .btn-7 {
-	top: 726.5px;
-	left: 702.4px;
+  top: 329.5px;
+  left: 270.4px;
 }
 
 .btn-8 {
-	top: 723.6px;
-	left: 893.8px;
+  top: 629.6px;
+  left: 273.8px;
 }
 
 .btn-9 {
-	top: 723.3px;
-	left: 1090.3px;
+
+  top: 332.9px;
+  left: 544.4px;
+
 }
 
 .btn-10 {
-	top: 332.9px;
-	left: 702.4px;
+  top: 329.5px;
+  left: 270.4px;
 }
 
 .btn-11 {
-	top: 330.4px;
-	left: 885.6px;
+  top: 330.4px;
+  left: 815.4px;
 }
 
 .btn-12 {
-	top: 333.3px;
-	left: 1084.0px;
+  top: 333.3px;
+  left: 1084.0px;
 }
 
 .btn-13 {
-  top: 509.5px;
-  left: 702.4px;
+  top: 629.6px;
+  left: 273.8px;
 }
 
-.btn-14 {
-	top: 509.5px;
-	left: 894.4px;
+/**********************************************************************/
+/***************************** vire o celular *************************/
+/**********************************************************************/
+
+.p-paisagem {
+  color: #71512b;
+  text-align: center;
 }
 
+.img-paisagem {
+  max-width: 70% !important;
+  height: auto;
+  display: block;
+}
 
+@media only screen and (orientation: portrait) {
+  .modo-smart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffa155;
+    z-index: 9999999999999999999;
+  }
+}
