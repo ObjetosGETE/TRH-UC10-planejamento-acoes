@@ -10,21 +10,22 @@ $(document).ready(function () {
       })
 });
 
-
-
 function controleBotoes() {
     $('.btn-criar-acao').on('click', function () {
+        $("#audio-clique")[0].play();
         $('.tela-1').addClass('d-none');
         $('.tela-2').removeClass('d-none');
     });
 
 
     $('.btn-primeira-tela').on('click', function () {
+        $("#audio-clique")[0].play();
         $('.tela-2').addClass('d-none');
         $('.tela-1').removeClass('d-none');
     });
 
     $('.btn-continuar').on('click', function () {
+        $("#audio-clique")[0].play();
         $('#modalInstrucao').modal('hide');
         $('#modalInstrucao').on('hidden.bs.modal', function () {
             $('#modalInstrucao2').modal('show');
@@ -32,6 +33,7 @@ function controleBotoes() {
     });
 
     $('.btn-fechar-modal').on('click', function () {
+        $("#audio-clique")[0].play();
         $('.modal-backdrop').remove();
         $('body').removeClass('modal-open').css('padding-right', '');
     });
@@ -131,16 +133,24 @@ function fraseAleatoria() {
         const titulo = $(this).data('titulo');
         const texto = $(this).data('feedback');
         const tipo = $(this).data('tipo');
-
+    
         $('#modalFeedbackLabel').text(titulo);
         $('#modalTextoFeedback').text(texto);
-
+    
         if (tipo === 'positivo') {
-            $('#modalFeedback .modal-content').removeClass('modal-negativo').addClass('modal-positivo');
+            $('#modalFeedback .modal-content')
+                .removeClass('modal-negativo')
+                .addClass('modal-positivo');
+            $("#audio-acerto")[0].play();
+            $(this).css('background-image', "url('assets/img/img-correto.png')");
         } else {
-            $('#modalFeedback .modal-content').removeClass('modal-positivo').addClass('modal-negativo');
+            $('#modalFeedback .modal-content')
+                .removeClass('modal-positivo')
+                .addClass('modal-negativo');
+            $("#audio-errado")[0].play();
+            $(this).css('background-image', "url('assets/img/img-errado.png')");
         }
-
+    
         $('#modalFeedback').modal('show');
     });
 
@@ -209,12 +219,12 @@ function criaModal() {
         }
     };
 
-    // Associa os botões dinamicamente
     $.each(conteudosModal, function (classeBtn, dados) {
         $('.' + classeBtn).on('click', function () {
             $('#modalPlanejamentoLabel').text(dados.titulo);
-            $('#modalTexto').html(dados.texto.replace(/\n/g, "<br>")); // quebra de linha
+            $('#modalTexto').html(dados.texto.replace(/\n/g, "<br>")); 
             $('#modalPlanejamento').modal('show');
+              $("#audio-clique")[0].play();
         });
     });
 }
@@ -232,6 +242,7 @@ function controleSetas() {
     });
 
     $('.btn-voltar').on('click', function () {
+        $("#audio-clique")[0].play();
         $('.parte-2').addClass('animando-sumir');
         setTimeout(() => {
             $('.parte-2').addClass('d-none').removeClass('animando-sumir');
@@ -243,6 +254,7 @@ function controleSetas() {
     });
 
     $('.btn-avancar-tela2').on('click', function () {
+        $("#audio-clique")[0].play();
         $('.parte-a').addClass('animando-sumir');
         setTimeout(() => {
             $('.parte-a').addClass('d-none').removeClass('animando-sumir');
@@ -254,6 +266,7 @@ function controleSetas() {
     });
 
     $('.btn-voltar-tela2').on('click', function () {
+        $("#audio-clique")[0].play();
         $('.parte-b').addClass('animando-sumir');
         setTimeout(() => {
             $('.parte-b').addClass('d-none').removeClass('animando-sumir');
