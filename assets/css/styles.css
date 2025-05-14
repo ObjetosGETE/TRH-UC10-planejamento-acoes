@@ -288,7 +288,6 @@
   left: 1234.7px;
 }
 
-
 /********************************************************************/
 /***************************** segunda tela ************************/
 /********************************************************************/
@@ -353,7 +352,7 @@
 }
 
 .btn-opcoes {
-  background-image: url('../img/btn-opcoes.png');
+  background-image: url("../img/btn-opcoes.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -381,7 +380,7 @@
 
 .btn-3 {
   top: 333.3px;
-  left: 1084.0px;
+  left: 1084px;
 }
 
 .btn-4 {
@@ -410,10 +409,8 @@
 }
 
 .btn-9 {
-
   top: 332.9px;
   left: 544.4px;
-
 }
 
 .btn-10 {
@@ -428,7 +425,7 @@
 
 .btn-12 {
   top: 333.3px;
-  left: 1084.0px;
+  left: 1084px;
 }
 
 .btn-13 {
