@@ -10,34 +10,6 @@ $(document).ready(function () {
   });
 });
 
-function controleBotoes() {
-  $(".btn-criar-acao").on("click", function () {
-    $("#audio-clique")[0].play();
-    $(".tela-1").addClass("d-none");
-    $(".tela-2").removeClass("d-none");
-  });
-
-  $(".btn-primeira-tela").on("click", function () {
-    $("#audio-clique")[0].play();
-    $(".tela-2").addClass("d-none");
-    $(".tela-1").removeClass("d-none");
-  });
-
-  $(".btn-continuar").on("click", function () {
-    $("#audio-clique")[0].play();
-    $("#modalInstrucao").modal("hide");
-    $("#modalInstrucao").on("hidden.bs.modal", function () {
-      $("#modalInstrucao2").modal("show");
-    });
-  });
-
-  $(".btn-fechar-modal").on("click", function () {
-    $("#audio-clique")[0].play();
-    $(".modal-backdrop").remove();
-    $("body").removeClass("modal-open").css("padding-right", "");
-  });
-}
-
 function fraseAleatoria() {
   const opcoes = [
     {
@@ -227,54 +199,72 @@ function criaModal() {
   });
 }
 
+function controleBotoes() {
+  $(".btn-criar-acao").on("click", function () {
+    $("#audio-clique")[0].play();
+    $(".tela-1").addClass("d-none");
+    $(".tela-2").removeClass("d-none");
+    $("#modalInstrucao").modal("show");
+  });
+
+  $(".btn-primeira-tela").on("click", function () {
+    $("#audio-clique")[0].play();
+    $(".tela-2").addClass("d-none");
+    $(".tela-1").removeClass("d-none");
+  });
+
+  $(".btn-continuar").on("click", function () {
+    $("#audio-clique")[0].play();
+    $("#modalInstrucao").modal("hide");
+    $("#modalInstrucao").on("hidden.bs.modal", function () {
+      $("#modalInstrucao2").modal("show");
+    });
+  });
+
+  $(".btn-fechar-modal").on("click", function () {
+    $("#audio-clique")[0].play();
+    $(".modal-backdrop").remove();
+    $("body").removeClass("modal-open").css("padding-right", "");
+  });
+}
+
 function controleSetas() {
-  $(".btn-avancar").on("click", function () {
-    $(".parte-1").addClass("animando-sumir");
+  const TEMPO_ANIMACAO = 500;
+
+  function transicao(parteAtual, parteDestino, novaImagem = null) {
+    parteAtual.addClass("animando-sumir");
+    if (novaImagem) {
+      $('.img-bg-tela-1').attr('src', novaImagem);
+    }
     setTimeout(() => {
-      $(".parte-1").addClass("d-none").removeClass("animando-sumir");
-      $(".parte-2").removeClass("d-none").addClass("animando-aparecer");
+      parteAtual.addClass("d-none").removeClass("animando-sumir");
+      parteDestino.removeClass("d-none").addClass("animando-aparecer");
       setTimeout(() => {
-        $(".parte-2").removeClass("animando-aparecer");
-      }, 500);
-    }, 500);
+        parteDestino.removeClass("animando-aparecer");
+      }, TEMPO_ANIMACAO);
+    }, TEMPO_ANIMACAO);
+  }
+
+  $(".btn-avancar").on("click", function () {
+    transicao($(".parte-1"), $(".parte-2"), 'assets/img/bg-tela-1-a.png');
   });
 
   $(".btn-voltar").on("click", function () {
     $("#audio-clique")[0].play();
-    $(".parte-2").addClass("animando-sumir");
-    setTimeout(() => {
-      $(".parte-2").addClass("d-none").removeClass("animando-sumir");
-      $(".parte-1").removeClass("d-none").addClass("animando-aparecer");
-      setTimeout(() => {
-        $(".parte-1").removeClass("animando-aparecer");
-      }, 500);
-    }, 500);
+    transicao($(".parte-2"), $(".parte-1"), 'assets/img/bg-tela-1.png');
   });
 
   $(".btn-avancar-tela2").on("click", function () {
     $("#audio-clique")[0].play();
-    $(".parte-a").addClass("animando-sumir");
-    setTimeout(() => {
-      $(".parte-a").addClass("d-none").removeClass("animando-sumir");
-      $(".parte-b").removeClass("d-none").addClass("animando-aparecer");
-      setTimeout(() => {
-        $(".parte-b").removeClass("animando-aparecer");
-      }, 500);
-    }, 500);
+    transicao($(".parte-a"), $(".parte-b"));
   });
 
   $(".btn-voltar-tela2").on("click", function () {
     $("#audio-clique")[0].play();
-    $(".parte-b").addClass("animando-sumir");
-    setTimeout(() => {
-      $(".parte-b").addClass("d-none").removeClass("animando-sumir");
-      $(".parte-a").removeClass("d-none").addClass("animando-aparecer");
-      setTimeout(() => {
-        $(".parte-a").removeClass("animando-aparecer");
-      }, 500);
-    }, 500);
+    transicao($(".parte-b"), $(".parte-a"));
   });
 }
+
 
 function escalaProporcao(largura, altura) {
   var larguraScreen = $(window).width();

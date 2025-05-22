@@ -21,6 +21,9 @@
 .btn-data {
   background-color: rgba(255, 255, 255, 0);
   border: none;
+  font-size: 1.5rem;
+  color: #0e4988;
+  font-weight: bold;
 }
 
 .btn-data:hover {
@@ -28,15 +31,16 @@
 }
 
 .btn-criar-acao {
-  background-color: #ffefd2;
-  color: #6f5029;
-  border: 2px solid #613917;
+  background-color: #db5289;
+  color: white;
+  border: 2px solid #a02355;
   border-radius: 30px;
+  width: 151px;
+  padding: 4.3px;
+  font-size: 2rem;
   top: 958.9px;
   left: 1393.3px;
   width: 239.4px;
-  padding: 4.3px;
-  font-size: 2rem;
 }
 
 .btn-criar-acao:hover {
@@ -53,13 +57,13 @@
 }
 
 .btn-voltar {
-  top: 529.2px;
-  left: 385.9px;
+  top: 707.2px;
+  left: 355.9px;
 }
 
 .btn-avancar {
-  top: 460.7px;
-  left: 1377.2px;
+  top: 707.2px;
+  left: 1460.2px;
 }
 
 .d-none {
@@ -109,183 +113,301 @@
   padding-inline: 28px;
 }
 
+
+.modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0;
+  background-color: #fff0;
+  border: none;
+}
+
+.box_instrucoes {
+  background-image: url('../img/box_instrucoes.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 529px;
+}
+
+.box_feedback {
+  background-image: url('../img/box.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 589px;
+  height: 455px;
+}
+
 .btn-fechar-modal {
-  background-color: #ff9e52;
-  color: #6f5029;
-  border: 2px solid #613917;
+  background-color: #db5289;
+  color: white;
+  border: 2px solid #a02355;
   border-radius: 30px;
   width: 151px;
   padding: 4.3px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .btn-fechar-modal:hover {
   transform: scale(0.8);
+  color: white;
 }
 
 .btn-continuar {
-  background-color: #ff9e52;
-  color: #6f5029;
-  border: 2px solid #613917;
+  background-color: #db5289;
+  color: white;
+  border: 2px solid #a02355;
   border-radius: 30px;
-  width: 151px;
   padding: 4.3px;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 505px;
+  left: 128px;
+  width: 196px;
 }
 
 .btn-continuar:hover {
   transform: scale(0.8);
+  color: white;
+}
+
+.btn.btn-fechar-modal.fecha-instrucao {
+  position: absolute;
+  top: 500px;
+  left: 147px;
 }
 
 .estilo-modal {
-  color: #855222;
+  color:#0e4988;
 }
 
 .p-modal {
-  color: #855222;
+  color:#0e4988;
+
   font-size: 1rem;
 }
 
-/********************************************************************/
-/************************ posicionamento mês ************************/
-/********************************************************************/
-
-.mes-1 {
-  top: 442.2px;
-  left: 585.3px;
-  font-size: 3rem;
-  rotate: -6deg;
+#modalTextoInicial {
+  top: 349px;
+  margin-inline: 43px;
+  color: #0e4989;
+  font-size: 1rem;
+  left: -10px;
 }
 
-.mes-2 {
-  top: 430.3px;
-  left: 700.5px;
-  font-size: 3rem;
-  rotate: -4.6deg;
+.btn-close.transparente {
+  top: 19px;
+  position: absolute;
+  left: 424px;
+  padding: 28px;
+  background-color: #fff0;
+  border: none;
 }
 
-.mes-3 {
-  top: 426.2px;
-  left: 832.1px;
-  font-size: 3rem;
-  rotate: -7.4deg;
+.fecha-modal-inicial {
+  top: 523px;
+  left: 188px;
+
 }
 
-.mes-4 {
-  top: 418.4px;
-  left: 938.9px;
-  font-size: 3rem;
-  rotate: -7.6deg;
+#modalFeedbackLabel {
+  margin-top: 70px;
+  text-align: center;
+  margin-left: 42px;
+  color:#0e4988;
+  font-weight: bold;
 }
 
-.mes-5 {
-  top: 405.3px;
-  left: 1065.9px;
-  font-size: 3rem;
-  rotate: -7.5deg;
+#modalInstrucaoLabel {
+  text-align: center;
+  margin-top: 45px;
+  color:#0e4988;
+  font-weight: bold;
 }
 
-.mes-6 {
-  top: 396.8px;
-  left: 1195px;
-  font-size: 3rem;
-  rotate: -7.6deg;
+#modalInstrucaoLabel2 {
+  text-align: center;
+  margin-top: 51px;
+  color:#0e4988;
+  font-weight: bold;
 }
 
-.mes-7 {
-  top: 442.2px;
-  left: 585.3px;
-  font-size: 3rem;
-  rotate: -6deg;
+.btn-close.transparente.x1 {
+  top: -1px;
+  left: 403px;
 }
 
-.mes-8 {
-  top: 430.3px;
-  left: 700.5px;
-  font-size: 3rem;
-  rotate: -4.6deg;
+#modalTextoFeedback {
+  padding: 14px;
+  margin-left: 45px;
 }
 
-.mes-9 {
-  top: 426.2px;
-  left: 832.1px;
-  font-size: 3rem;
-  rotate: -7.4deg;
+.fecha-feedback {
+  position: absolute;
 }
 
-.mes-10 {
-  top: 418.4px;
-  left: 938.9px;
-  font-size: 3rem;
-  rotate: -7.6deg;
+.fecha-feedback {
+  top: 395px;
+  left: 204px;
 }
 
-.mes-11 {
-  top: 405.3px;
-  left: 1065.9px;
-  font-size: 3rem;
-  rotate: -7.5deg;
+.btn-close.transparente.x2 {
+	top: 20px;
+	left: 528px;
 }
 
-.mes-12 {
-  top: 396.8px;
-  left: 1195px;
-  font-size: 3rem;
-  rotate: -7.6deg;
+.btn.btn-fechar-modal.fecha-modal-planejamento {
+	position: absolute;
+	top: 379px;
+	left: 179px;
 }
 
+#modalTexto {
+	margin-left: 39px;
+}
+
+#modalPlanejamentoLabel {
+	text-align: center;
+	margin-top: 53px;
+}
+
+.x3 {
+	top: 30px;
+	left: 498px;
+}
 /********************************************************************/
 /********************** posicionamento botões ***********************/
 /********************************************************************/
 
 .btn-fev {
+  background-image: url("../img/btn_carnaval.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
   top: 509.5px;
-  left: 702.4px;
+  left: 594.4px;
 }
 
 .btn-mar {
-  top: 591.8px;
-  left: 839.4px;
+  background-image: url("../img/btn_mulher.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 533.8px;
+  left: 787.4px;
 }
 
 .btn-abr {
-  top: 673.8px;
-  left: 973.1px;
+  background-image: url("../img/btn_pascoa.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 537.8px;
+  left: 975.1px;
 }
 
 .btn-mai {
-  top: 478.1px;
-  left: 1068.2px;
+  background-image: url("../img/btn_trabalho.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 512.8px;
+  left: 1152.1px;
 }
 
 .btn-jun {
-  top: 650.3px;
-  left: 1234.7px;
+  background-image: url("../img/btn_familia.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 465.8px;
+  left: 1327.1px;
 }
 
 .btn-ago {
+  background-image: url("../img/btn_empresa.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
   top: 509.5px;
-  left: 702.4px;
+  left: 589.4px;
 }
 
 .btn-set {
-  top: 591.8px;
-  left: 839.4px;
+  background-image: url("../img/btn_amarelo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 510.8px;
+  left: 784.4px;
 }
 
 .btn-out {
-  top: 673.8px;
+  background-image: url("../img/btn_rosa.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 532.8px;
   left: 973.1px;
 }
 
 .btn-nov {
+  background-image: url("../img/btn_azul.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
   top: 478.1px;
-  left: 1068.2px;
+  left: 1143.2px;
 }
 
 .btn-dez {
-  top: 650.3px;
-  left: 1234.7px;
+  background-image: url("../img/btn_natal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 191px;
+  height: 238px;
+  rotate: -8deg;
+  top: 491.3px;
+  left: 1327.7px;
 }
 
 /********************************************************************/
@@ -293,21 +415,22 @@
 /********************************************************************/
 
 .subtitulo-tela-2 {
-  position: absolute;
-  top: 164.7px;
-  left: 767.2px;
-  width: 420.3px;
-  color: #6f5029;
+	position: absolute;
+	top: 114.7px;
+	left: 478.2px;
+	width: 676.3px;
+	color: #0e4988;
+	font-weight: bold;
+	font-size: 3rem;
+	text-align: center;
 }
 
 .btn-primeira-tela {
-  background-color: #ffefd2;
-  color: #6f5029;
-  border: 2px solid #613917;
+  background-color: #db5289;
+  color: white;
+  border: 2px solid #a02355;
   border-radius: 30px;
-  top: 958.9px;
-  left: 1019.9px;
-  width: 239.4px;
+  width: 151px;
   padding: 4.3px;
   font-size: 2rem;
 }
@@ -317,15 +440,17 @@
 }
 
 .btn-instrucao {
-  background-color: #ffefd2;
-  color: #6f5029;
-  border: 2px solid #613917;
+
+  background-color: #db5289;
+  color: white;
+  border: 2px solid #a02355;
   border-radius: 30px;
+  width: 151px;
+  padding: 4.3px;
+  font-size: 2rem;
   top: 958.9px;
   left: 732.5px;
   width: 239.4px;
-  padding: 4.3px;
-  font-size: 2rem;
 }
 
 .btn-instrucao:hover {
@@ -342,12 +467,12 @@
 }
 
 .btn-voltar-tela2 {
-  top: 566.2px;
-  left: 133.2px;
+  top: 528.2px;
+  left: 65.2px;
 }
 
 .btn-avancar-tela2 {
-  top: 566.2px;
+  top: 528.2px;
   left: 1360.6px;
 }
 
@@ -360,12 +485,14 @@
   height: 291px;
   border: none;
   background-color: transparent;
-  font-size: 2.3rem;
+  font-size: 2rem;
   text-align: center;
   white-space: normal !important;
   line-height: 1.2;
   overflow-wrap: break-word;
   padding: 25px;
+  color: #0e4988;
+  font-weight: bold;
 }
 
 .btn-1 {
