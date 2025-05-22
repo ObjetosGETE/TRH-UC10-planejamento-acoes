@@ -9,8 +9,9 @@ $(document).ready(function () {
     resizeBodyConteudo();
   });
 });
-
+let abrirModalFinal = false; 
 function fraseAleatoria() {
+ 
   const opcoes = [
     {
       texto: "Gincanas e atividades ao ar livre",
@@ -99,15 +100,22 @@ function fraseAleatoria() {
       $(this).data("tipo", opcao.tipo);
     }
   });
-
+  
+  $("#modalFeedback").on("hidden.bs.modal", function () {
+    if (abrirModalFinal) {
+      abrirModalFinal = false;  
+      $("#modalFinal").modal("show"); 
+    }
+  });
+  
   $(".btn-opcoes").on("click", function () {
     const titulo = $(this).data("titulo");
     const texto = $(this).data("feedback");
     const tipo = $(this).data("tipo");
-
+  
     $("#modalFeedbackLabel").text(titulo);
     $("#modalTextoFeedback").text(texto);
-
+  
     if (tipo === "positivo") {
       $("#modalFeedback .modal-content")
         .removeClass("modal-negativo")
@@ -121,7 +129,10 @@ function fraseAleatoria() {
       $("#audio-errado")[0].play();
       $(this).css("background-image", "url('assets/img/img-errado.png')");
     }
-
+  
+    $(this).addClass("clicado");
+    verificaFinalizacao();
+  
     $("#modalFeedback").modal("show");
   });
 }
@@ -265,6 +276,19 @@ function controleSetas() {
   });
 }
 
+function verificaFinalizacao() {
+  const botoesPositivos = $(".btn-opcoes").filter(function () {
+    return $(this).data("tipo") === "positivo";
+  });
+
+  const todosClicados = botoesPositivos.toArray().every(function (botao) {
+    return $(botao).hasClass("clicado");
+  });
+
+  if (todosClicados) {
+    abrirModalFinal = true;  // Marca para abrir depois do feedback
+  }
+}
 
 function escalaProporcao(largura, altura) {
   var larguraScreen = $(window).width();

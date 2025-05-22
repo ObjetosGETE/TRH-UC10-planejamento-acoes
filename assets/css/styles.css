@@ -286,6 +286,22 @@
 	top: 30px;
 	left: 498px;
 }
+
+.btn.fecha-modal-final {
+	width: 211px;
+	left: 289px;
+	position: absolute;
+}
+
+.p-modal.p-final {
+	margin-left: 34px;
+	margin-top: 16px;
+}
+
+#modalFinalLabel {
+	margin-top: 70px;
+	text-align: center;
+}
 /********************************************************************/
 /********************** posicionamento botões ***********************/
 /********************************************************************/

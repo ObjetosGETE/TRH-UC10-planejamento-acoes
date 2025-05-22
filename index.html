@@ -51,13 +51,11 @@
       <button class="position-absolute btn-opcoes parte-a btn-3" aria-label="Opção 3"></button>
       <button class="position-absolute btn-opcoes parte-a btn-4" aria-label="Opção 4"></button>
       <button class="position-absolute btn-opcoes parte-a btn-5" aria-label="Opção 5"></button>
-
       <button class="position-absolute btn-opcoes parte-a btn-6" aria-label="Opção 6"></button>
       <button class="position-absolute btn-opcoes parte-a btn-7" aria-label="Opção 7"></button>
       <button class="position-absolute btn-opcoes parte-a btn-8" aria-label="Opção 8"></button>
       <button class="position-absolute btn-opcoes d-none parte-b btn-9" aria-label="Opção 9"></button>
       <button class="position-absolute btn-opcoes d-none parte-b btn-10" aria-label="Opção 10"></button>
-
       <button class="position-absolute btn-opcoes d-none parte-b btn-11" aria-label="Opção 11"></button>
       <button class="position-absolute btn-opcoes d-none parte-b btn-12" aria-label="Opção 12"></button>
       <button class="position-absolute btn-opcoes d-none parte-b btn-13" aria-label="Opção 13"></button>
@@ -95,13 +93,12 @@
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content box_feedback estilo-modal">
-
         <div class="modal-body">
           <button type="button" class="btn-close transparente x3" data-bs-dismiss="modal" aria-label="Close"></button>
           <h1 class="modal-title titulo-modal col fs-5" id="modalPlanejamentoLabel">Título</h1>
           <p class="p-modal" id="modalTexto">Texto aqui</p>
-          <button type="button" class="btn btn-fechar-modal fecha-modal-planejamento" data-bs-dismiss="modal">Fechar</button>
-
+          <button type="button" class="btn btn-fechar-modal fecha-modal-planejamento"
+            data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
@@ -123,7 +120,6 @@
             para a realização das ações.</p>
           <button type="button" class="btn btn-fechar-modal fecha-modal-inicial position-absolute"
             data-bs-dismiss="modal">Fechar</button>
-
         </div>
       </div>
     </div>
@@ -175,7 +171,6 @@
           outras ações, o que significa que não há orçamento adicional disponível para esse evento específico. <br>
           <br>Utilize
           sua criatividade para o planejamento da ação, considerando as seguintes opções:
-
           <button type="button" class="btn btn-fechar-modal fecha-instrucao" data-bs-dismiss="modal">Fechar</button>
         </div>
 
@@ -183,7 +178,20 @@
     </div>
   </div>
 
-
+  <div class="modal fade" id="modalFinal" tabindex="-1" aria-labelledby="modalFinalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content box_feedback estilo-modal">
+        <div class="modal-body">
+          <button type="button" class="btn-close transparente x3" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h3 class="modal-title titulo-modal col fs-5" id="modalFinalLabel">Muito bem!</h3>
+          <p class="p-modal p-final">Estas são todas as ações que podemos utilizar neste contexto.
+            Basta escolher as que atendem melhor a proposta do se evento e ele será um sucesso. </p>
+          <button type="button" class="btn fecha-modal-final" data-bs-dismiss="modal"><img class="img-fluid"
+              src="assets/img/calendario.png" alt="voltar para calendário"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <audio id="audio-acerto">
