@@ -11,7 +11,13 @@
 
 <body>
   <div class="body-game conteudo">
-    <div class="tela-1 painel-clicavel position-relative">
+    <div class="capa position-relative">
+      <img class="position-relative img-fluid" src="assets/img/capa.jpeg" alt="capa background mesa com calendario">
+      <button class="position-absolute btn-iniciar" aria-label="Iniciar"> Começar <img class="img-fluid"
+          src="assets/img/seta-direita.png" alt="icone seta"></button>
+    </div>
+
+    <div class="tela-1 painel-clicavel position-relative d-none">
       <img class="img-bg-tela-1 position-relative img-fluid" src="assets/img/bg-tela-1.png"
         alt="Fundo Tela 1 background mesa com calendario">
 
@@ -24,12 +30,14 @@
         da empresa</button>
       <button class="position-absolute btn-data parte-2 d-none btn-set" aria-label="Setembro amarelo">Setembro
         amarelo</button>
-      <button class="position-absolute btn-data parte-2 d-none btn-out" aria-label="Outubro rosa">Outubro rosa</button>
+      <button class="position-absolute btn-data parte-2 d-none btn-out" aria-label="Outubro rosa">Outubro
+        rosa</button>
       <button class="position-absolute btn-data parte-2 d-none btn-nov" aria-label="Novembro azul">Novembro
         azul</button>
       <button class="position-absolute btn-data parte-2 d-none btn-dez" aria-label="Natal">Natal</button>
 
-      <button class="button position-absolute btn-criar-acao" aria-label="Criar ação">Criar ação</button>
+      <button class="button position-absolute btn-criar-acao" aria-label="Criar ação">Criar ação <img class="img-fluid"
+          src="assets/img/seta-direita.png" alt="icone seta"></button>
 
       <button class="position-absolute btn-seta btn-voltar parte-2 d-none" aria-label="Voltar">
         <img class="img-fluid" src="assets/img/seta_volta.png" alt="botão voltar">
@@ -68,9 +76,11 @@
         <img class="img-fluid" src="assets/img/seta_avanca.png" alt="botão avançar">
       </button>
 
-      <button class="button position-absolute btn-primeira-tela" aria-label="Calendário">Calendário</button>
+      <button class="btn position-absolute btn-primeira-tela" aria-label=" voltar para calendário">Voltar <img
+          class="img-fluid" src="assets/img/seta-redonda.png" alt="icone voltar"></button>
       <button class="btn position-absolute btn-instrucao" data-bs-target="#modalInstrucao" data-bs-toggle="modal"
-        aria-label="Abrir instrução">Instrução</button>
+        aria-label="Abrir instrução"><img class="img-fluid" src="assets/img/bt_informacoes.png"
+          alt="botão de instrução"></button>
 
     </div>
   </div>
@@ -98,27 +108,6 @@
           <h1 class="modal-title titulo-modal col fs-5" id="modalPlanejamentoLabel">Título</h1>
           <p class="p-modal" id="modalTexto">Texto aqui</p>
           <button type="button" class="btn btn-fechar-modal fecha-modal-planejamento"
-            data-bs-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="modalInicial" tabindex="-1" aria-labelledby="modalInicialLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content estilo-modal-inicial">
-
-        <div class="modal-body text-center">
-
-          <img class="img-fluid position-relative" src="assets/img/logo.png" alt="Logo jogo endomarketing">
-          <button type="button" class="btn-close transparente" data-bs-dismiss="modal" aria-label="Close"></button>
-          <p class="p-modal-inicial position-absolute" id="modalTextoInicial">Observe o planejamento das ações de
-            endomarketing a serem aplicadas pela
-            primeira vez em uma empresa de pequeno
-            porte, com uma cultura colaborativa e
-            engajada, mas baixo orçamento
-            para a realização das ações.</p>
-          <button type="button" class="btn btn-fechar-modal fecha-modal-inicial position-absolute"
             data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
@@ -153,7 +142,8 @@
             das
             demandas de endomarketing conduza um gerenciamento eficaz dessas iniciativas e busque soluções criativas,
             considerando a cultura organizacional, o orçamento e as oportunidades disponíveis a serem exploradas.   </p>
-          <button type="button" class="btn btn-continuar">Continuar</button>
+          <button type="button" class="btn btn-continuar">Continuar <img class="img-fluid"
+              src="assets/img/seta-direita.png" alt="icone seta"></button>
         </div>
 
       </div>
@@ -205,6 +195,7 @@
   <audio id="audio-clique">
     <source src="assets/audio/clique.mp3" type="audio/mpeg">
   </audio>
+
 
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/bootstrap.js"></script>

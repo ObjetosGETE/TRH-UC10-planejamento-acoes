@@ -3,15 +3,17 @@ $(document).ready(function () {
   criaModal();
   controleBotoes();
   fraseAleatoria();
-  $("#modalInicial").modal("show");
   resizeBodyConteudo();
   $(window).resize(function () {
     resizeBodyConteudo();
   });
 });
-let abrirModalFinal = false; 
+
+
+let abrirModalFinal = false;
+
 function fraseAleatoria() {
- 
+
   const opcoes = [
     {
       texto: "Gincanas e atividades ao ar livre",
@@ -100,22 +102,22 @@ function fraseAleatoria() {
       $(this).data("tipo", opcao.tipo);
     }
   });
-  
+
   $("#modalFeedback").on("hidden.bs.modal", function () {
     if (abrirModalFinal) {
-      abrirModalFinal = false;  
-      $("#modalFinal").modal("show"); 
+      abrirModalFinal = false;
+      $("#modalFinal").modal("show");
     }
   });
-  
+
   $(".btn-opcoes").on("click", function () {
     const titulo = $(this).data("titulo");
     const texto = $(this).data("feedback");
     const tipo = $(this).data("tipo");
-  
+
     $("#modalFeedbackLabel").text(titulo);
     $("#modalTextoFeedback").text(texto);
-  
+
     if (tipo === "positivo") {
       $("#modalFeedback .modal-content")
         .removeClass("modal-negativo")
@@ -129,10 +131,12 @@ function fraseAleatoria() {
       $("#audio-errado")[0].play();
       $(this).css("background-image", "url('assets/img/img-errado.png')");
     }
-  
+
     $(this).addClass("clicado");
-    verificaFinalizacao();
-  
+    setTimeout(function () {
+      verificaFinalizacao();
+    }, 3000);
+
     $("#modalFeedback").modal("show");
   });
 }
@@ -211,6 +215,13 @@ function criaModal() {
 }
 
 function controleBotoes() {
+  $(".btn-iniciar").on("click", function () {
+    $("#audio-clique")[0].play();
+    $(".capa").addClass("d-none");
+    $(".tela-1").removeClass("d-none");
+  });
+
+
   $(".btn-criar-acao").on("click", function () {
     $("#audio-clique")[0].play();
     $(".tela-1").addClass("d-none");
@@ -286,9 +297,13 @@ function verificaFinalizacao() {
   });
 
   if (todosClicados) {
-    abrirModalFinal = true;  // Marca para abrir depois do feedback
+    abrirModalFinal = true;
   }
 }
+
+
+
+
 
 function escalaProporcao(largura, altura) {
   var larguraScreen = $(window).width();

@@ -27,15 +27,29 @@
 }
 
 .btn-data:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
+}
+
+.btn-iniciar {
+  background: linear-gradient(90deg, #f48ab6 0%, #d9427a 100%);
+  color: white;
+  border: 2px solid #a02355;
+  border-radius: 41px;
+  padding: 12.3px;
+  font-size: 2.5rem;
+  top: 893.9px;
+  left: 811.3px;
+  width: 345.4px;
+  height: 92px;
+  animation: pulsar 1.5s infinite ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .btn-criar-acao {
-  background-color: #db5289;
+  background: linear-gradient(90deg, #f48ab6 0%, #d9427a 100%);
   color: white;
   border: 2px solid #a02355;
   border-radius: 30px;
-  width: 151px;
   padding: 4.3px;
   font-size: 2rem;
   top: 958.9px;
@@ -44,7 +58,7 @@
 }
 
 .btn-criar-acao:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
 }
 
 .btn-seta {
@@ -53,7 +67,7 @@
 }
 
 .btn-seta:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
 }
 
 .btn-voltar {
@@ -98,6 +112,21 @@
 
   100% {
     opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* aumenta 10% */
+  }
+
+  100% {
     transform: scale(1);
   }
 }
@@ -150,7 +179,7 @@
 }
 
 .btn-fechar-modal {
-  background-color: #db5289;
+  background: linear-gradient(90deg, #f48ab6 0%, #d9427a 100%);
   color: white;
   border: 2px solid #a02355;
   border-radius: 30px;
@@ -160,12 +189,12 @@
 }
 
 .btn-fechar-modal:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
   color: white;
 }
 
 .btn-continuar {
-  background-color: #db5289;
+  background: linear-gradient(90deg, #f48ab6 0%, #d9427a 100%);
   color: white;
   border: 2px solid #a02355;
   border-radius: 30px;
@@ -178,7 +207,7 @@
 }
 
 .btn-continuar:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
   color: white;
 }
 
@@ -189,11 +218,11 @@
 }
 
 .estilo-modal {
-  color:#0e4988;
+  color: #0e4988;
 }
 
 .p-modal {
-  color:#0e4988;
+  color: #0e4988;
 
   font-size: 1rem;
 }
@@ -225,21 +254,21 @@
   margin-top: 70px;
   text-align: center;
   margin-left: 42px;
-  color:#0e4988;
+  color: #0e4988;
   font-weight: bold;
 }
 
 #modalInstrucaoLabel {
   text-align: center;
   margin-top: 45px;
-  color:#0e4988;
+  color: #0e4988;
   font-weight: bold;
 }
 
 #modalInstrucaoLabel2 {
   text-align: center;
   margin-top: 51px;
-  color:#0e4988;
+  color: #0e4988;
   font-weight: bold;
 }
 
@@ -263,45 +292,46 @@
 }
 
 .btn-close.transparente.x2 {
-	top: 20px;
-	left: 528px;
+  top: 20px;
+  left: 528px;
 }
 
 .btn.btn-fechar-modal.fecha-modal-planejamento {
-	position: absolute;
-	top: 379px;
-	left: 179px;
+  position: absolute;
+  top: 379px;
+  left: 179px;
 }
 
 #modalTexto {
-	margin-left: 39px;
+  margin-left: 39px;
 }
 
 #modalPlanejamentoLabel {
-	text-align: center;
-	margin-top: 53px;
+  text-align: center;
+  margin-top: 53px;
 }
 
 .x3 {
-	top: 30px;
-	left: 498px;
+  top: 30px;
+  left: 498px;
 }
 
 .btn.fecha-modal-final {
-	width: 211px;
-	left: 289px;
-	position: absolute;
+  width: 211px;
+  left: 289px;
+  position: absolute;
 }
 
 .p-modal.p-final {
-	margin-left: 34px;
-	margin-top: 16px;
+  margin-left: 34px;
+  margin-top: 16px;
 }
 
 #modalFinalLabel {
-	margin-top: 70px;
-	text-align: center;
+  margin-top: 70px;
+  text-align: center;
 }
+
 /********************************************************************/
 /********************** posicionamento botões ***********************/
 /********************************************************************/
@@ -426,7 +456,7 @@
   left: 1327.7px;
 }
 
-button:focus, 
+button:focus,
 button:active,
 button:focus-visible {
   outline: none;
@@ -438,46 +468,41 @@ button:focus-visible {
 /********************************************************************/
 
 .subtitulo-tela-2 {
-	position: absolute;
-	top: 114.7px;
-	left: 478.2px;
-	width: 676.3px;
-	color: #0e4988;
-	font-weight: bold;
-	font-size: 3rem;
-	text-align: center;
+  position: absolute;
+  top: 114.7px;
+  left: 478.2px;
+  width: 676.3px;
+  color: #0e4988;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .btn-primeira-tela {
-  background-color: #db5289;
+  background: linear-gradient(90deg, #f48ab6 0%, #d9427a 100%);
   color: white;
   border: 2px solid #a02355;
   border-radius: 30px;
-  width: 151px;
+  width: 216px;
   padding: 4.3px;
   font-size: 2rem;
+  top: 965px;
+  left: 1318px;
 }
 
 .btn-primeira-tela:hover {
-  transform: scale(0.8);
+  color: white;
+transform: scale(1.1);
 }
 
 .btn-instrucao {
-
-  background-color: #db5289;
-  color: white;
-  border: 2px solid #a02355;
-  border-radius: 30px;
   width: 151px;
-  padding: 4.3px;
-  font-size: 2rem;
-  top: 958.9px;
-  left: 732.5px;
-  width: 239.4px;
+  top: 137px;
+  left: 30px;
 }
 
 .btn-instrucao:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
 }
 
 .btn-seta {
@@ -486,7 +511,7 @@ button:focus-visible {
 }
 
 .btn-seta:hover {
-  transform: scale(0.8);
+transform: scale(1.1);
 }
 
 .btn-voltar-tela2 {
