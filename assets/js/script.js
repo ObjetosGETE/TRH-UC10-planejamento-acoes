@@ -9,11 +9,10 @@ $(document).ready(function () {
   });
 });
 
-
 let abrirModalFinal = false;
+let modalFinalJaExibida = false;
 
 function fraseAleatoria() {
-
   const opcoes = [
     {
       texto: "Gincanas e atividades ao ar livre",
@@ -86,7 +85,6 @@ function fraseAleatoria() {
       feedback: `Infelizmente a empresa não possui recursos para a compra de brindes, mas com criatividade e um bom planejamento, a memória desse dia certamente será um bom presente.`,
     },
   ];
-
   function embaralhar(array) {
     return array.sort(() => Math.random() - 0.5);
   }
@@ -100,17 +98,12 @@ function fraseAleatoria() {
       $(this).data("titulo", opcao.texto);
       $(this).data("feedback", opcao.feedback);
       $(this).data("tipo", opcao.tipo);
+      $(this).removeClass("clicado"); // reset no início
     }
   });
 
-  $("#modalFeedback").on("hidden.bs.modal", function () {
-    if (abrirModalFinal) {
-      abrirModalFinal = false;
-      $("#modalFinal").modal("show");
-    }
-  });
-
-  $(".btn-opcoes").on("click", function () {
+  // garantir que não tenha múltiplos listeners
+  $(".btn-opcoes").off("click").on("click", function () {
     const titulo = $(this).data("titulo");
     const texto = $(this).data("feedback");
     const tipo = $(this).data("tipo");
@@ -133,12 +126,37 @@ function fraseAleatoria() {
     }
 
     $(this).addClass("clicado");
-    setTimeout(function () {
-      verificaFinalizacao();
-    }, 3000);
+
+    // Verifica se deve mostrar a modal final
+    const totalBotoes = $(".btn-opcoes").length;
+    const clicados = $(".btn-opcoes.clicado").length;
+
+    if (clicados === totalBotoes && !modalFinalJaExibida) {
+      modalFinalJaExibida = true;
+
+      // Mostrar modal final com leve atraso após o feedback
+      $("#modalFeedback").on("hidden.bs.modal.modalFinalTrigger", function () {
+        $(this).off("hidden.bs.modal.modalFinalTrigger"); // remove listener específico
+        $("#modalFinal").modal("show");
+      });
+    }
 
     $("#modalFeedback").modal("show");
   });
+}
+
+function verificaFinalizacao() {
+  const totalBotoes = $(".btn-opcoes").length;
+  const botoesClicados = $(".btn-opcoes.clicado").length;
+
+  if (
+    botoesClicados === totalBotoes &&
+    !abrirModalFinal &&
+    !modalFinalJaExibida
+  ) {
+    abrirModalFinal = true;
+    modalFinalJaExibida = true;
+  }
 }
 
 function criaModal() {
@@ -221,7 +239,6 @@ function controleBotoes() {
     $(".tela-1").removeClass("d-none");
   });
 
-
   $(".btn-criar-acao").on("click", function () {
     $("#audio-clique")[0].play();
     $(".tela-1").addClass("d-none");
@@ -256,7 +273,7 @@ function controleSetas() {
   function transicao(parteAtual, parteDestino, novaImagem = null) {
     parteAtual.addClass("animando-sumir");
     if (novaImagem) {
-      $('.img-bg-tela-1').attr('src', novaImagem);
+      $(".img-bg-tela-1").attr("src", novaImagem);
     }
     setTimeout(() => {
       parteAtual.addClass("d-none").removeClass("animando-sumir");
@@ -268,12 +285,12 @@ function controleSetas() {
   }
 
   $(".btn-avancar").on("click", function () {
-    transicao($(".parte-1"), $(".parte-2"), 'assets/img/bg-tela-1-a.png');
+    transicao($(".parte-1"), $(".parte-2"), "assets/img/bg-tela-1-a.png");
   });
 
   $(".btn-voltar").on("click", function () {
     $("#audio-clique")[0].play();
-    transicao($(".parte-2"), $(".parte-1"), 'assets/img/bg-tela-1.png');
+    transicao($(".parte-2"), $(".parte-1"), "assets/img/bg-tela-1.png");
   });
 
   $(".btn-avancar-tela2").on("click", function () {
@@ -300,10 +317,6 @@ function verificaFinalizacao() {
     abrirModalFinal = true;
   }
 }
-
-
-
-
 
 function escalaProporcao(largura, altura) {
   var larguraScreen = $(window).width();

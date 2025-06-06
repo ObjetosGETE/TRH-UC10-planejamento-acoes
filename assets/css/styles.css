@@ -1,3 +1,11 @@
+.body-game.conteudo {
+  box-shadow: 0 0 10px #00000091;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
 .conteudo {
   width: 1920px;
   height: 1080px;
@@ -27,7 +35,7 @@
 }
 
 .btn-data:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-iniciar {
@@ -58,7 +66,7 @@ transform: scale(1.1);
 }
 
 .btn-criar-acao:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-seta {
@@ -67,7 +75,7 @@ transform: scale(1.1);
 }
 
 .btn-seta:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-voltar {
@@ -142,7 +150,6 @@ transform: scale(1.1);
   padding-inline: 28px;
 }
 
-
 .modal-content {
   position: relative;
   display: -ms-flexbox;
@@ -153,15 +160,15 @@ transform: scale(1.1);
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: .3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
   outline: 0;
   background-color: #fff0;
   border: none;
 }
 
 .box_instrucoes {
-  background-image: url('../img/box_instrucoes.png');
+  background-image: url("../img/box_instrucoes.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -170,7 +177,7 @@ transform: scale(1.1);
 }
 
 .box_feedback {
-  background-image: url('../img/box.png');
+  background-image: url("../img/box.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -189,7 +196,7 @@ transform: scale(1.1);
 }
 
 .btn-fechar-modal:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
   color: white;
 }
 
@@ -207,7 +214,7 @@ transform: scale(1.1);
 }
 
 .btn-continuar:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
   color: white;
 }
 
@@ -236,18 +243,14 @@ transform: scale(1.1);
 }
 
 .btn-close.transparente {
-  top: 19px;
   position: absolute;
-  left: 424px;
-  padding: 28px;
-  background-color: #fff0;
+  background-color: #f0f8ff00;
   border: none;
 }
 
 .fecha-modal-inicial {
   top: 523px;
   left: 188px;
-
 }
 
 #modalFeedbackLabel {
@@ -260,21 +263,21 @@ transform: scale(1.1);
 
 #modalInstrucaoLabel {
   text-align: center;
-  margin-top: 45px;
+  margin-top: 33.4px;
   color: #0e4988;
   font-weight: bold;
 }
 
 #modalInstrucaoLabel2 {
   text-align: center;
-  margin-top: 51px;
+  margin-top: 37.5px;
   color: #0e4988;
   font-weight: bold;
 }
 
 .btn-close.transparente.x1 {
-  top: -1px;
-  left: 403px;
+  top: -19.2px;
+  left: 389.7px;
 }
 
 #modalTextoFeedback {
@@ -312,8 +315,8 @@ transform: scale(1.1);
 }
 
 .x3 {
-  top: 30px;
-  left: 498px;
+  top: 23.2px;
+  left: 472.8px;
 }
 
 .btn.fecha-modal-final {
@@ -492,7 +495,7 @@ button:focus-visible {
 
 .btn-primeira-tela:hover {
   color: white;
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-instrucao {
@@ -502,7 +505,7 @@ transform: scale(1.1);
 }
 
 .btn-instrucao:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-seta {
@@ -511,17 +514,17 @@ transform: scale(1.1);
 }
 
 .btn-seta:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-voltar-tela2 {
-  top: 528.2px;
-  left: 65.2px;
+	top: 528.2px;
+	left: 123.3px;
 }
 
 .btn-avancar-tela2 {
-  top: 528.2px;
-  left: 1360.6px;
+	top: 528.2px;
+	left: 1622.6px;
 }
 
 .btn-opcoes {
@@ -545,67 +548,67 @@ transform: scale(1.1);
 
 .btn-1 {
   top: 332.9px;
-  left: 544.4px;
+	left: 653.9px;
 }
 
 .btn-2 {
   top: 330.4px;
-  left: 815.4px;
+left: 992.3px;
 }
 
 .btn-3 {
   top: 333.3px;
-  left: 1084px;
+ left: 1335.0px;
 }
 
 .btn-4 {
-  top: 627.5px;
-  left: 543.4px;
+	top: 627.5px;
+	left: 653.9px;
 }
 
 .btn-5 {
   top: 629.5px;
-  left: 815.4px;
+left: 992.3px;
 }
 
 .btn-6 {
   top: 629.5px;
-  left: 1087.5px;
+ left: 1335.0px;
 }
 
 .btn-7 {
   top: 329.5px;
-  left: 270.4px;
+ 	left: 307.9px;
 }
 
 .btn-8 {
-  top: 629.6px;
-  left: 273.8px;
+	top: 629.6px;
+	left: 307.9px;
 }
 
 .btn-9 {
   top: 332.9px;
-  left: 544.4px;
+  left: 653.9px;
 }
 
 .btn-10 {
   top: 329.5px;
-  left: 270.4px;
+ left: 307.9px;
 }
 
 .btn-11 {
   top: 330.4px;
-  left: 815.4px;
+ left: 992.3px;
 }
 
 .btn-12 {
   top: 333.3px;
-  left: 1084px;
+  left: 1335.0px;
 }
 
 .btn-13 {
   top: 629.6px;
-  left: 273.8px;
+  left: 307.9px;
 }
 
 /**********************************************************************/
@@ -613,8 +616,12 @@ transform: scale(1.1);
 /**********************************************************************/
 
 .p-paisagem {
-  color: #71512b;
+  color: white;
   text-align: center;
+}
+
+.modo-smart {
+  display: none;
 }
 
 .img-paisagem {
@@ -636,7 +643,7 @@ transform: scale(1.1);
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ffa155;
+    background-color: #546da8;
     z-index: 9999999999999999999;
   }
 }
